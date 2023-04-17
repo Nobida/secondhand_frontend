@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { TabItem, TabContainer } from '../components/Tabs'
 import MainContainer from './MainContainer'
+import CardList from './CardList'
 
 class App extends Component {
 
@@ -25,6 +26,7 @@ class App extends Component {
         <TabContainer className="tabs-fixed-top" activeItem={this.state.curTab} >
         </TabContainer>
         <MainContainer/>
+        <CardList/>
       </div>
     )
   }
