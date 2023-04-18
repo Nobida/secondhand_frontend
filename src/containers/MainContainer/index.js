@@ -1,6 +1,6 @@
 import React from 'react';
-import { BottomNav, BottomNavItem } from '../components/BottomNav';
-import { book, clock, user } from '../svg';
+import { BottomNav, BottomNavItem } from '../../components/BottomNav';
+import { book, clock, user } from '../../svg';
 
 
 export default class MainContainer extends React.Component {

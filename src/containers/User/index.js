@@ -1,10 +1,10 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import Avatar from '../components/Avatar';
-import Icon from '../components/Icon';
-import Button from '../components/Button';
-import IconButton from '../components/IconButton';
-import { bookS, question, setting, note, comment, shelf, userAdd,menu,gift } from "../svg";
+import Avatar from '../../components/Avatar';
+import Icon from '../../components/Icon';
+import Button from '../../components/Button';
+import IconButton from '../../components/IconButton';
+import { bookS, question, setting, note, comment, shelf, userAdd,menu,gift } from "../../svg";
 import './style.scss';
 
 class UserHead extends React.Component {

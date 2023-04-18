@@ -1,9 +1,8 @@
 import React from 'react';
-import './style.scss';
-import CardItem from '../components/CardItem';
-import Button from '../components/Button';
-import {ROOT_URL,DEFAULT_COURSE_BG} from "../api/const";
-import Loadings from '../components/Loadings'
+import CardItem from '../../components/CardItem';
+import Button from '../../components/Button';
+import {ROOT_URL,DEFAULT_COURSE_BG} from "../../api/const";
+import Loadings from '../../components/Loadings'
 
 
 
