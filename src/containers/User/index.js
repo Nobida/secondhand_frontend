@@ -7,20 +7,29 @@ import IconButton from '../../components/IconButton';
 import { bookS, question, setting, note, comment, shelf, userAdd,menu,gift } from "../../svg";
 import './style.scss';
 
+
+
+
 class UserHead extends React.Component {
   render() {
     const { user_info, score, punch } = this.props;
     return (
       <div className="user-head">
         <Avatar size="lg" />
-        <div className="nickname"></div>
         <div className='user-info'>
-          <div className="info-item">
-            <span> 考勤 &nbsp; </span><span><b>{punch}</b></span>
+          <div className='user-account-info'>
+            <div className="user-nickname">Ali Motion</div>
+            <div className='user-account'>@alihusnimotion</div>
+            <div className='user-info-follow'>
+              <div className="info-item">
+                <span> <b>{punch}</b> &nbsp; </span><span>Follower</span>
+              </div>
+              <div className="info-item">
+                <span> <b>{ score }</b> &nbsp; </span><span>Following</span>
+              </div>
+            </div>
           </div>
-          <div className="info-item">
-            <span> 积分 &nbsp; </span> <span><b>{score}</b></span>
-          </div>
+
         </div>
       </div>
 
@@ -28,36 +37,20 @@ class UserHead extends React.Component {
   }
 }
 
+
+
 class UserTools extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
   }
   render(){
-    return(
-      <div className="tools">
-        <div className="tool-icon">
-            <Icon icon={shelf}/>
-            <div className="label">我的课程</div>
+    return (
+      <div className="ranking-item">
+        <div className="left">
+          My Work
         </div>
-        <div className="tool-icon">
-            <Icon icon={menu}/>
-            <div className="label">我的订单</div>
-        </div>
-        <div className="tool-icon">
-            <Icon icon={bookS}/>
-            <div className="label">积分兑换</div>
-        </div>
-        <div className="tool-icon">
-            <Icon icon={comment}/>
-            <div className="label">学员须知</div>
-        </div>
-        <div className="tool-icon">
-            <Icon icon={note}/>
-            <div className="label">我的笔记</div>
-        </div>
-        <div className="tool-icon">
-            <Icon icon={question}/>
-            <div className="label">我的问题</div>
+        <div className="right">
+          》
         </div>
       </div>
     )
@@ -83,6 +76,7 @@ export default class User extends React.Component {
 
     return (
       <div>
+        <div>Profile</div>
         <div className="user">     
           <UserHead
             user_info={user_info}
@@ -90,6 +84,10 @@ export default class User extends React.Component {
             score={0}
           />
           <UserTools/>
+          <UserTools/>
+          <UserTools/>
+          <UserTools/>
+          <Button/>
 
 
         </div>

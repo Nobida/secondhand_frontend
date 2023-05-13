@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import User from '../User'
 
+import Home from '../Home'
+import './style.scss'
 class Test extends Component {
 
   constructor(props) {
@@ -11,17 +13,13 @@ class Test extends Component {
     }
   }
 
-  componentDidMount() {
-    const {history} = this.props;
-
-  }
 
   render(){
     const {curTab} = this.state
     
     return(
-      <div className="note-list-drawer">
-          <User/>
+      <div className="react-container">
+          <Home/>
         
       </div>
     )

@@ -11,7 +11,7 @@
 
   .user-head {
     margin-top: 10px;
-    @include flex(center, center, column);
+    @include flex(space-between);
     .avatar {
       margin-bottom: 20px;
     }
@@ -23,10 +23,16 @@
     margin-top: 10px;
     @include flex(space-between);
     width: 65%;
+    .user-account-info{
+      @include flex(center, center, column);
+
+    }
     .info-item{
-      width: 50%;
+      width: 40%;
       margin: 10px;
-      @include flex(center);
+    }
+    .user-info-follow{
+      @include flex(space-between);
     }
   }
   .gift-btn{
@@ -74,3 +80,29 @@
   width  : 70px;
 }
 
+
+.ranking-item{
+  margin: 20px 0;
+  @include flex(space-between,center);
+  .left{
+    @include flex(flex-start,center);
+  }
+  .rank{
+    margin-right: 10px;
+  }
+  .name{
+    margin-left: 20px;
+    font-size: $font-size-small;
+  }
+  .right{
+    @include flex(flex-start,flex-end);
+  }
+  .num{
+    font-weight: bold;
+    font-size: $font-size-small;
+  }
+  .type{
+    color: $brand-color;
+    font-size: $font-size-tiny;
+  }
+}

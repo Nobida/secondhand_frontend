@@ -3,6 +3,10 @@ import { BottomNav, BottomNavItem } from '../../components/BottomNav';
 import { book, clock, user } from '../../svg';
 
 
+
+
+
+
 export default class MainContainer extends React.Component {
 
   constructor(props) {
@@ -65,8 +69,8 @@ export default class MainContainer extends React.Component {
           handleIndexChange={this.handleIndexChange.bind(this)}
           activeItem={this.state.activeIndex}
         >
-          <BottomNavItem icon={book} label="今日"/>
-          <BottomNavItem icon={clock} label="进度"/>
+          <BottomNavItem icon={book} label="首页"/>
+          <BottomNavItem icon={clock} label="订单"/>
           <BottomNavItem icon={user} label="我的"/>
         </BottomNav>
       </div>

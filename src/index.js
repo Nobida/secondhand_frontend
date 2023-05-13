@@ -10,7 +10,7 @@ import './common_style/common_style.scss';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Provider>{route}</Provider>,
+    <Test/>
   </React.StrictMode>
 );
 
