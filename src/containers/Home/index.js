@@ -6,6 +6,43 @@ import Card from '../../components/Card';
 import Tag from '../../components/Tag';
 import './style.scss';
 
+
+
+import GoogleMapReact from 'google-map-react';
+
+
+
+function SimpleMap(){
+  const defaultProps = {
+    center: {
+      lat: 10.99835602,
+      lng: 77.01502627
+    },
+    zoom: 17
+  };
+
+  return (
+    // Important! Always set the container height explicitly
+    <div style={{ height: '100vh', width: '100%' }}>
+      <GoogleMapReact
+        bootstrapURLKeys={{ key: "" }}
+        defaultCenter={defaultProps.center}
+        defaultZoom={defaultProps.zoom}
+      >
+      </GoogleMapReact>
+    </div>
+  );
+}
+
+
+
+
+
+
+
+
+
+
 class Map extends React.Component {
   render() {
     
@@ -22,13 +59,36 @@ class Map extends React.Component {
 
 
 class TaskLocation extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      inputValue: '',
+    };
+  }
+
+  handleChange = (event) => {
+    this.setState({ inputValue: event.target.value });
+  };
+
+  handleSubmit = (event) => {
+    event.preventDefault();
+    console.log('输入的值：', this.state.inputValue);
+  };
+
   render() {
-    
     return (
-      <div className="task-location">
-        task-location
-      </div>
-      );
+      <form onSubmit={this.handleSubmit}>
+        <label>
+          填写取件地址
+          <input
+            type="text"
+            value={this.state.inputValue}
+            onChange={this.handleChange}
+          />
+        </label>
+      </form>
+    );
   }
 }
 
@@ -45,10 +105,9 @@ class TaskButton extends React.Component {
 
 class Introduction extends React.Component {
   render() {
-    
     return (
       <div className="introduction">
-        
+        帮送服务流程
       </div>
       );
   }
@@ -56,6 +115,13 @@ class Introduction extends React.Component {
 
 
 class TaskContainer extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { contents: '', showToast: false };
+  }
+
+
+
   render() {
     
     return (
@@ -72,6 +138,7 @@ class TaskContainer extends React.Component {
          <TaskLocation/>
          <TaskButton/>
          <Introduction/>
+         <SimpleMap/>
       </div>
       );
   }
@@ -98,7 +165,7 @@ class Home extends Component {
     
     return(
       <div>
-        <Map/>
+        
         <MainContainer/>
         <TaskContainer/>
         

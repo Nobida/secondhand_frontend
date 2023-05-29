@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import Avatar from '../../components/Avatar';
 import Icon from '../../components/Icon';
 import Button from '../../components/Button';
+import MainContainer from '../MainContainer'
 import IconButton from '../../components/IconButton';
 import { bookS, question, setting, note, comment, shelf, userAdd,menu,gift } from "../../svg";
 import './style.scss';
@@ -76,21 +77,29 @@ export default class User extends React.Component {
 
     return (
       <div>
-        <div>Profile</div>
         <div className="user">     
           <UserHead
             user_info={user_info}
             punch={0}
             score={0}
           />
+          <UserTools
+            content="优惠券"
+            />
           <UserTools/>
           <UserTools/>
           <UserTools/>
           <UserTools/>
-          <Button/>
+          <UserTools/>
+          <UserTools/>
+          <UserTools/>
+          <UserTools/>
+
+
 
 
         </div>
+        <MainContainer/>
       </div>
     );
   }
